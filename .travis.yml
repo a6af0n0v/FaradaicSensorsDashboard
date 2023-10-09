@@ -8,4 +8,4 @@ before_install:
   - docker build -t a6af0n0v/faradaicsensorsdashboard -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true a6af0n0v/faradaicsensorsdashboard npm run testa
+  - docker run -e CI=true a6af0n0v/faradaicsensorsdashboard npm run test

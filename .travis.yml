@@ -11,8 +11,8 @@ deploy:
   provider: elasticbeanstalk
   edge: true
   region: "eu-central-1"
-  app: "FaradaICSensorDashBoard"
-  env: "FaradaICSensorDashBoard-env"
+  app: "FaradaicSensorDashboard"
+  env: "FaradaicSensorDashboard-env"
   bucket_name: "elasticbeanstalk-eu-central-1-505046403352"
   bucket_path: "FaradaICSensorDashBoard"
   on:

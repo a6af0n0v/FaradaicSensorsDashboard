@@ -9,6 +9,7 @@ before_install:
 
 deploy:
   provider: elasticbeanstalk
+  edge: true
   region: "eu-central-1"
   app: "FaradaICSensorDashBoard"
   env: "FaradaICSensorDashBoard-env"
@@ -18,4 +19,4 @@ deploy:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: "$AWS_SECRET_KEY"
-  skip_cleanup: true
+  

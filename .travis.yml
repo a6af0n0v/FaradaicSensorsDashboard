@@ -7,5 +7,16 @@ services:
 before_install:
   - docker build -t a6af0n0v/faradaicsensorsdashboard -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true a6af0n0v/faradaicsensorsdashboard npm run test
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "FaradaICSensorDashBoard"
+  env: "FaradaICSensorDashBoard-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-505046403352"
+  bucket_path: "FaradaICSensorDashBoard"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
+  
